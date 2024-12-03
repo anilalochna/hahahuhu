@@ -29,13 +29,12 @@ let desc = `
 
 > ➤ *𝗔𝗚𝗢* - ${data.ago}
 
->  downloding & sending plase waite...🚀💗
+*1 Download Song In Audio Type*
+*2 Download Song In Document Type*
 
 > *𝙋𝙊𝙒𝙀𝙍𝘿 𝘽𝙔 𝘼𝙉𝙄𝙇𝘼 𝙇𝙊𝘾𝙃𝘼𝙉𝘼*
-
-> ↺ |◁   II   ▷|   ♡
   `
- await conn.sendMessage(from,{image:{url: data.thumbnail},caption:desc},{quoted:mek})
+ const vv = await conn.sendMessage(from,{image:{url: data.thumbnail},caption:desc},{quoted:mek})
  
  //download audio
 
@@ -100,13 +99,12 @@ let desc = `*❮❮❮ BLACK LEAUGE MD VIDEO DOWNLOADER ❯❯❯*
 
 > ➤ *𝗔𝗚𝗢* - ${data.ago}
 
-> 🎬 Your video downloading....
+*1 Download Video Type*
+*2 Download Video Document Type*
 
-> *𝙋𝙊𝙒𝙀𝙍𝘿 𝘽𝙔 𝘼𝙉𝙄𝙇𝘼 𝙇𝙊𝘾𝙃𝘼𝙉𝘼*
-
-> ↺ |◁   II   ▷|   ♡
-  `
- await conn.sendMessage(from,{image:{url: data.thumbnail},caption:desc},{quoted:mek})
+> *𝙋𝙊𝙒𝙀𝙍𝘿 𝘽𝙔 𝘼𝙉𝙄𝙇𝘼 𝙇𝙊𝘾𝙃𝘼𝙉𝘼*`
+    
+const vv = await conn.sendMessage(from,{image:{url: data.thumbnail},caption:desc},{quoted:mek})
  
  //download video
 
