@@ -123,7 +123,7 @@ conn.ev.on('messages.upsert', async (msgUpdate) => {
                     case '1':
   await conn.sendMessage(from,{video: {url:downloadUrl},mimetype:"video/mp4",caption:"> *𝙋𝙊𝙒𝙀𝙍𝘿 𝘽𝙔 𝘼𝙉𝙄𝙇𝘼 𝙇𝙊𝘾𝙃𝘼𝙉𝘼*"},{quoted:mek})
                     break;
-                    case'2
+                    case'2'
   await conn.sendMessage(from,{document: {url:downloadUrl},mimetype:"video/mp4",fileName:data.title + ".mp4",caption:"> *𝙋𝙊𝙒𝙀𝙍𝘿 𝘽𝙔 𝘼𝙉𝙄𝙇𝘼 𝙇𝙊𝘾𝙃𝘼𝙉𝘼*"},{quoted:mek})
                    break;
                   default:
