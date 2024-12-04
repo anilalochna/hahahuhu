@@ -121,6 +121,7 @@ conn.ev.on('messages.upsert', async (msgUpdate) => {
             if (msg.message.extendedTextMessage.contextInfo && msg.message.extendedTextMessage.contextInfo.stanzaId === vv.key.id) {
                 switch (selectedOption) {
                     case '1'
+ await conn.sendMessage(from,{video: {url:downloadUrl},mimetype:"video/mp4",caption:"> 𝐏𝐎𝐖𝐄𝐑𝐃 𝐁𝐘 𝐀𝐍𝐈𝐋𝐀 𝐋𝐎𝐂𝐇𝐀𝐍𝐀"},{quoted:mek})
                       break;
                     case'2'
   await conn.sendMessage(from,{document: {url:downloadUrl},mimetype:"video/mp4",fileName:data.title + ".mp4",caption:"> 𝐏𝐎𝐖𝐄𝐑𝐃 𝐁𝐘 𝐀𝐍𝐈𝐋𝐀 𝐋𝐎𝐂𝐇𝐀𝐍𝐀"},{quoted:mek})
