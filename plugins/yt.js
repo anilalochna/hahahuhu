@@ -75,19 +75,20 @@ reply(e)
 //
 cmd({
     pattern: "video",
-    desc: "download videos.",
-    react: "📽️",
+    desc: "download video.",
     category: "download",
+    react: "🎧",
     filename: __filename
 },
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
-if(!q) return reply(">🔗Please give me a URL or TITLE🔗*")
+if(!q) return reply("> 🔗Please give me a URL or TITLE🔗*")
 const search = await yts (q) 
 const data = search.videos[0];
 const url = data.url
 
-let desc = `*❮❮❮ BLACK LEAUGE MD VIDEO DOWNLOADER ❯❯❯*
+let desc = `
+ *❮❮❮ BLACK LEAUGE MD SONG DOWNLOADER ❯❯❯*
 
 > ➤ *𝗧𝗜𝗧𝗟𝗘* - ${data.title}
 
@@ -99,20 +100,21 @@ let desc = `*❮❮❮ BLACK LEAUGE MD VIDEO DOWNLOADER ❯❯❯*
 
 > ➤ *𝗔𝗚𝗢* - ${data.ago}
 
-> ➤ *1 Download Video Type*
-> ➤ *2 Download Video Document Type*
+> ➤ *1 Download Video  Type*
+> ➤ *2 Download Video In Document Type*
 
-> *𝙋𝙊𝙒𝙀𝙍𝘿 𝘽𝙔 𝘼𝙉𝙄𝙇𝘼 𝙇𝙊𝘾𝙃𝘼𝙉𝘼*`
-    
-const vv = await conn.sendMessage(from,{image:{url: data.thumbnail},caption:desc},{quoted:mek})
+> *𝙋𝙊𝙒𝙀𝙍𝘿 𝘽𝙔 𝘼𝙉𝙄𝙇𝘼 𝙇𝙊𝘾𝙃𝘼𝙉𝘼*
+  `
+ const vv = await conn.sendMessage(from,{image:{url: data.thumbnail},caption:desc},{quoted:mek})
  
- //download video
+ //download audio
 
- let down = await fg.ytv(url)
+ let down = await fg.yta(url)
  let downloadUrl = down.dl_url
     
- //send video+ document message 
-conn.ev.on('messages.upsert', async (msgUpdate) => {
+ //send audio+ document message 
+
+  conn.ev.on('messages.upsert', async (msgUpdate) => {
             const msg = msgUpdate.messages[0];
             if (!msg.message || !msg.message.extendedTextMessage) return;
 
@@ -120,14 +122,14 @@ conn.ev.on('messages.upsert', async (msgUpdate) => {
 
             if (msg.message.extendedTextMessage.contextInfo && msg.message.extendedTextMessage.contextInfo.stanzaId === vv.key.id) {
                 switch (selectedOption) {
-                    case '1'
- await conn.sendMessage(from,{video: {url:downloadUrl},mimetype:"video/mp4",caption:"> 𝐏𝐎𝐖𝐄𝐑𝐃 𝐁𝐘 𝐀𝐍𝐈𝐋𝐀 𝐋𝐎𝐂𝐇𝐀𝐍𝐀"},{quoted:mek})
-                      break;
-                    case'2'
-  await conn.sendMessage(from,{document: {url:downloadUrl},mimetype:"video/mp4",fileName:data.title + ".mp4",caption:"> 𝐏𝐎𝐖𝐄𝐑𝐃 𝐁𝐘 𝐀𝐍𝐈𝐋𝐀 𝐋𝐎𝐂𝐇𝐀𝐍𝐀"},{quoted:mek})
-                   break;
-                  default:
-                        reply("Invalid option. Please select a valid option🔴");
+                    case '1':
+await conn.sendMessage(from,{video: {url:downloadUrl},mimetype:"video/mp4",caption:">Thenula Panapiti💕"},{quoted:mek})
+                    break;
+                    case'2':
+await conn.sendMessage(from,{document: {url:downloadUrl},mimetype:"video/mp4",fileName:data.title + ".mp4",caption:"> Thenula Panapiti💕"},{quoted:mek})
+                    break;
+                    default:
+                    reply("Invalid option. Please select a valid option🔴");
                 }
 
             }
@@ -138,5 +140,3 @@ console.log(e)
 reply(e)
 }
 });
-
-
