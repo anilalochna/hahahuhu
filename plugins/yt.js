@@ -55,7 +55,7 @@ let desc = `
  await conn.sendMessage(from,{audio: {url:downloadUrl},mimetype:"audio/mpeg"},{quoted:mek})
                     break;
                     case'2':
- await conn.sendMessage(from,{document: {url:downloadUrl},mimetype:"audio/mpeg",fileName:data.title + ".mp3",caption:"> *𝙋𝙊𝙒𝙀𝙍𝘿 𝘽𝙔 𝘼𝙉𝙄𝙇𝘼 𝙇𝙊𝘾𝙃𝘼𝙉𝘼*"},{quoted:mek})
+ await conn.sendMessage(from,{document: {url:downloadUrl},mimetype:"audio/mpeg",fileName:data.title + ".mp3",caption:"> *𝐏𝐎𝐖𝐄𝐑𝐃 𝐁𝐘 𝐀𝐍𝐈𝐋𝐀 𝐋𝐎𝐂𝐇𝐀𝐍𝐀*"},{quoted:mek})
                     break;
                         default:
                         reply("Invalid option. Please select a valid option🔴");
@@ -121,10 +121,10 @@ conn.ev.on('messages.upsert', async (msgUpdate) => {
             if (msg.message.extendedTextMessage.contextInfo && msg.message.extendedTextMessage.contextInfo.stanzaId === vv.key.id) {
                 switch (selectedOption) {
                     case '1':
-  await conn.sendMessage(from,{video: {url:downloadUrl},mimetype:"video/mp4",caption:"> *𝙋𝙊𝙒𝙀𝙍𝘿 𝘽𝙔 𝘼𝙉𝙄𝙇𝘼 𝙇𝙊𝘾𝙃𝘼𝙉𝘼*"},{quoted:mek})
+  await conn.sendMessage(from,{video: {url:downloadUrl},mimetype:"video/mp4",caption:"> *𝐏𝐎𝐖𝐄𝐑𝐃 𝐁𝐘 𝐀𝐍𝐈𝐋𝐀 𝐋𝐎𝐂𝐇𝐀𝐍𝐀*"},{quoted:mek})
                     break;
                     case'2'
-  await conn.sendMessage(from,{document: {url:downloadUrl},mimetype:"video/mp4",fileName:data.title + ".mp4",caption:"> *𝙋𝙊𝙒𝙀𝙍𝘿 𝘽𝙔 𝘼𝙉𝙄𝙇𝘼 𝙇𝙊𝘾𝙃𝘼𝙉𝘼*"},{quoted:mek})
+  await conn.sendMessage(from,{document: {url:downloadUrl},mimetype:"video/mp4",fileName:data.title + ".mp4",caption:"> *𝐏𝐎𝐖𝐄𝐑𝐃 𝐁𝐘 𝐀𝐍𝐈𝐋𝐀 𝐋𝐎𝐂𝐇𝐀𝐍𝐀*"},{quoted:mek})
                    break;
                   default:
                         reply("Invalid option. Please select a valid option🔴");
