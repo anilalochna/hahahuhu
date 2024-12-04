@@ -77,7 +77,7 @@ cmd({
     pattern: "video",
     desc: "download video.",
     category: "download",
-    react: "🎧",
+    react: "🎬",
     filename: __filename
 },
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
@@ -123,10 +123,10 @@ let desc = `
             if (msg.message.extendedTextMessage.contextInfo && msg.message.extendedTextMessage.contextInfo.stanzaId === vv.key.id) {
                 switch (selectedOption) {
                     case '1':
-await conn.sendMessage(from,{video: {url:downloadUrl},mimetype:"video/mp4",caption:">Thenula Panapiti💕"},{quoted:mek})
+await conn.sendMessage(from,{video: {url:downloadUrl},mimetype:"video/mp4",caption:"> 𝐏𝐎𝐖𝐄𝐑𝐃 𝐁𝐘 𝐀𝐍𝐈𝐋𝐀 𝐋𝐎𝐂𝐇𝐀𝐍𝐀"},{quoted:mek})
                     break;
                     case'2':
-await conn.sendMessage(from,{document: {url:downloadUrl},mimetype:"video/mp4",fileName:data.title + ".mp4",caption:"> Thenula Panapiti💕"},{quoted:mek})
+await conn.sendMessage(from,{document: {url:downloadUrl},mimetype:"video/mp4",fileName:data.title + ".mp4",caption:"> 𝐏𝐎𝐖𝐄𝐑𝐃 𝐁𝐘 𝐀𝐍𝐈𝐋𝐀 𝐋𝐎𝐂𝐇𝐀𝐍𝐀"},{quoted:mek})
                     break;
                     default:
                     reply("Invalid option. Please select a valid option🔴");
